@@ -1,0 +1,92 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Sms\SmsSender\SmsModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Email\EmailSender\Templates\dealerOrderNote.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNet.Security.OpenIdConnect.Primitives" Version="2.0.0-rc2-final" />
+    <PackageReference Include="AutoMapper" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.0" />
+    <PackageReference Include="OctoPack" Version="3.6.3" />
+    <PackageReference Include="OpenIddict.Core" Version="2.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.2.2" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.5.0" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.5.0" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.5.0" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.5.0" />
+    <PackageReference Include="TextmagicRest" Version="1.0.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Argentex.Core.SignalRService\Argentex.Core.SignalRService.csproj" />
+    <ProjectReference Include="..\SynetecLogger\SynetecLogger.csproj" />
+    <ProjectReference Include="..\UnitsOfWork\Argentex.Core.UnitsOfWork.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="OpenIddict.EntityFrameworkCore.Models">
+      <HintPath>..\..\..\Users\koldk\.nuget\packages\openiddict.entityframeworkcore.models\2.0.0\lib\netstandard2.0\OpenIddict.EntityFrameworkCore.Models.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Email\EmailSender\Templates\brokerTradeNote.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Email\EmailSender\Templates\inwardPayment.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Email\EmailSender\Templates\orderNote.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Email\EmailSender\Templates\cancelOrder.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Email\EmailSender\Templates\failedFIXTrades.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Email\EmailSender\Templates\outwardPayment.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Email\EmailSender\Templates\phoneChanged.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Email\EmailSender\Templates\passwordChanged.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Email\EmailSender\Templates\resetPassword.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Email\EmailSender\Templates\setNewPassword.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Email\EmailSender\Templates\settlementAssigned.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Email\EmailSender\Templates\tradeNote.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Email\EmailSender\Templates\UserChangeRequiresApprovalAlert.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+</Project>

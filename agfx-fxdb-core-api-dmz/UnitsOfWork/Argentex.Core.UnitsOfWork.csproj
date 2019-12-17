@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenIddict.Core" Version="2.0.0" />
+    <PackageReference Include="OpenIddict.EntityFrameworkCore" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Argentex.Core.DataAccess\Argentex.Core.DataAccess.csproj" />
+    <ProjectReference Include="..\Argentex.Core.Identity.DataAccess\Argentex.Core.Identity.DataAccess.csproj" />
+    <ProjectReference Include="..\Synetec.Data.UnitOfWork\Synetec.Data.UnitOfWork.csproj" />
+    <ProjectReference Include="..\SynetecLogger\SynetecLogger.csproj" />
+  </ItemGroup>
+
+</Project>
